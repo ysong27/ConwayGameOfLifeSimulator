@@ -1,14 +1,13 @@
 .row {
-    display: flex;
-  }
-  
-  .block {
-    width: 15px;
-    height: 15px;
-    border: 1px solid black;
-  }
-  
-  .block + .block {
-    border-left: 0;
-  }
-  
+  display: flex;
+}
+
+.block {
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+}
+
+.block+.block {
+  border-left: 0;
+}

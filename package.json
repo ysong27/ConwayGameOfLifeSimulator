@@ -1,0 +1,23 @@
+{
+  "name": "conwaygameoflifesimulator",
+  "version": "1.0.0",
+  "description": "Simulation of John Conway's Game of Life cellular automation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoonsong95/ConwayGameOfLifeSimulator.git"
+  },
+  "author": "YS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoonsong95/ConwayGameOfLifeSimulator/issues"
+  },
+  "homepage": "https://github.com/yoonsong95/ConwayGameOfLifeSimulator#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
