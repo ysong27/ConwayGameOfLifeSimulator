@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/css/style.css">
 </head>
 
 <body>
-    <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Conway's Game of Life</a>
-    <div>
-        <label for="select-dimension">Dimensions:</label>
-        <select id="select-dimension">
-            <option value="0" selected>Select Dimension</option>
-            <option value="5">5 x 5</option>
-            <option value="10">10 x 10</option>
-            <option value="15">15 x 15</option>
-            <option value="20">20 x 20</option>
-            <option value="30">30 x 30</option>
-            <option value="50">50 x 50</option>
-        </select>
-        <button id="startButton">1. Start</button>
-        <button id="stopButton">2. Pause</button>
-        <button id="clearButton">3. Clear</button>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Conway's Game of Life Simulator</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Information on John Conway's Game of Life (Wikipedia Link)</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="select-dimension">Dimensions: </label>
+                <select id="select-dimension">
+                    <option value="0" selected>Select Dimension</option>
+                    <option value="5">5 x 5</option>
+                    <option value="10">10 x 10</option>
+                    <option value="15">15 x 15</option>
+                    <option value="20">20 x 20</option>
+                    <option value="30">30 x 30</option>
+                    <option value="50">50 x 50</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="button-container">
+                <button class="btn btn-success" id="startButton">1. Start</button>
+                <button class="btn btn-warning" id="stopButton">2. Pause</button>
+                <button class="btn btn-danger" id="clearButton">3. Clear</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="grid-container"></div>
+        </div>
     </div>
-
-    </br>
-
-    <div id="grid-container"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

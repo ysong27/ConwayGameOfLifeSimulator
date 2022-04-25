@@ -71,7 +71,7 @@ $(document).ready(function () {
   function createGrid(dimension) {
     let grid = `<div class="grid">`;
     for (let i = 0; i < dimension; i++) {
-      grid += `<div class="row">`;
+      grid += `<div class="grid-row">`;
       for (let j = 0; j < dimension; j++) {
         grid += `<div class="block" id=r${i}c${j}></div>`;
       }
