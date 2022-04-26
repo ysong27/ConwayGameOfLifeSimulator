@@ -88,14 +88,8 @@ $(document).ready(function () {
       matrix = newMatrix;
     }, 1200);
 
-    // click stop button
     onClickStopButton(generatonIntervalId);
-  }
-
-  function onClickStopButton(generatonIntervalId) {
-    $("#stopButton").on("click", function () {
-      clearInterval(generatonIntervalId);
-    });
+    onClickClearButton(generatonIntervalId);
   }
 
   function onClickBlockPaint() {
@@ -135,23 +129,28 @@ $(document).ready(function () {
     });
   }
 
-  function onClickClearButton() {
-    $("#clearButton").on("click", function () {
-      $(".block").css("background-color", "white");
+  function onClickStopButton(generatonIntervalId) {
+    $("#stopButton").on("click", function () {
+      clearInterval(generatonIntervalId);
     });
   }
 
+  function onClickClearButton(generatonIntervalId) {
+    $("#clearButton").on("click", function () {
+      clearInterval(generatonIntervalId);
+      $(".block").css("background-color", "white");
+    });
+  }
 
   $("#select-dimension").on("change", function () {
     //  create grid
     let dimension = $("#select-dimension").val();
     var grid = createGrid(dimension, dimension);
-    $("#grid-container").html(grid);
+    $("#grid-container").html(grid);    
 
     // event listeners
     onClickBlockPaint();
     onClickStartButton(dimension);
-    onClickClearButton();
   });
 
 });
