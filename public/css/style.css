@@ -29,3 +29,22 @@
 #button-container > button {
   width: 200px;
 }
+
+#button-container {
+  display: flex;
+  gap: 10px;
+}
+
+#select-dimension-container {
+  display: flex;
+  gap: 10px;
+}
+
+#select-dimension-container > label {
+  font-weight: bold;
+}
+
+#select-dimension {
+  width: 300px;
+  border-radius: 5px;
+}
