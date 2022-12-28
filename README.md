@@ -1,4 +1,4 @@
-# ConwayGameOfLifeSimulator
+# Conway's Game of Life Simulator
 Cellular automation simulation of John Conway's "Game of Life" using JavaScript, jQuery, and Bootstrap
 
 # Rules
