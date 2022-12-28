@@ -51,7 +51,7 @@ function getInitialUserMatrix(dimension) {
       matrix = newMatrix;
     }, 1200);
   
-    onClickStopButton(generatonIntervalId);
+    onClickPauseButton(generatonIntervalId);
     onClickClearButton(generatonIntervalId);
   }
 
@@ -61,12 +61,23 @@ function onClickStartButton(dimension) {
       let matrix = getInitialUserMatrix(dimension);
       displayGenerationMatrix(matrix);
       startGenerations(matrix);
+
+      $("#startButton").hide();
+      $("#pauseButton").show();
+      $("#clearButton").hide();
+      $("#select-dimension").attr("disabled", "disabled");
+
     });
   }
   
-  function onClickStopButton(generatonIntervalId) {
-    $("#stopButton").on("click", function () {
+  function onClickPauseButton(generatonIntervalId) {
+    $("#pauseButton").on("click", function () {
       clearInterval(generatonIntervalId);
+
+      $("#startButton").show();
+      $("#pauseButton").hide();
+      $("#clearButton").show();
+
     });
   }
   
@@ -74,6 +85,11 @@ function onClickStartButton(dimension) {
     $("#clearButton").on("click", function () {
       clearInterval(generatonIntervalId);
       $(".block").css("background-color", "white");
+
+      $("startButton").show();
+      $("#pauseButton").hide();
+      $("#clearButton").hide();
+      $("#select-dimension").removeAttr("disabled");
     });
   }
   

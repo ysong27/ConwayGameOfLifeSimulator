@@ -4,12 +4,21 @@ import onClickStartButton from "./generation.js";
 
 $(document).ready(function () {
 
+  // hide pause and clear buttons initially
+  $("#startButton").hide();
+  $("#pauseButton").hide();
+  $("#clearButton").hide();
+
+
+
   // on selecting dimension, insert grid and event listeners
   $("#select-dimension").on("change", function () {
-    // grid
     let dimension = insertGrid();
-    
-    // event listeners
+
+    $("#startButton").show();
+    $("#pauseButton").hide();
+    $("#clearButton").hide();
+
     onClickBlockPaint();
     onClickStartButton(dimension);
   });
