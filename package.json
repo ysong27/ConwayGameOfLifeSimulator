@@ -19,5 +19,7 @@
   "homepage": "https://github.com/yoonsong95/ConwayGameOfLifeSimulator#readme",
   "dependencies": {
     "express": "^4.17.3"
-  }
+  },
+  "type": "module"
+
 }
