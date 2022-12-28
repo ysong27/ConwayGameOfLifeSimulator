@@ -4,7 +4,7 @@ import onClickStartButton from "./generation.js";
 
 $(document).ready(function () {
 
-  // hide pause and clear buttons initially
+  // hide all buttons initially
   $("#startButton").hide();
   $("#pauseButton").hide();
   $("#clearButton").hide();
@@ -15,6 +15,7 @@ $(document).ready(function () {
   $("#select-dimension").on("change", function () {
     let dimension = insertGrid();
 
+    // show start button only
     $("#startButton").show();
     $("#pauseButton").hide();
     $("#clearButton").hide();
